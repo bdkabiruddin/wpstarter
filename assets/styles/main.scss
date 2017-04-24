@@ -2,7 +2,9 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/tether/src/css/tether";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 // endbower
 
 @import "common/global";

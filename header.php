@@ -41,10 +41,41 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wpstarter' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <?php
+            wp_nav_menu( array(
+                'menu'              => 'menu-1',
+                'theme_location'    => 'menu-1',
+                'depth'             => 3,
+                'container'         => false,
+                'menu_class'        => 'navbar-nav ml-auto',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+            );
+        ?>
+
+
+
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
